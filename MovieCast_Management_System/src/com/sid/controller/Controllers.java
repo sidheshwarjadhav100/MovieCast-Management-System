@@ -14,7 +14,7 @@ public class Controllers {
 	public static List getAllMoviesFromDB() {
 
 		List allmovies = Logic.getAllMovies();
-		// System.out.println(allmovies);
+	
 
 		return allmovies;
 	}
@@ -35,7 +35,7 @@ public class Controllers {
 	}
 
 	
-
+//get single actor full info.
 	public static List getSingleActorInfo(String name) {
 		List actormovies = Logic.getSingleActorFullInfo(name);
 

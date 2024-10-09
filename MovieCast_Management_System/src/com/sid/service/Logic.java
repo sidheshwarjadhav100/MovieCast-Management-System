@@ -53,7 +53,6 @@ public class Logic {
 
 		List<String> movies = new ArrayList<String>();
 		for (Map.Entry<Integer, Map<String, List<Actor>>> outerentry : moviesmap.entrySet()) {
-			// System.out.println(movies);
 
 			Integer av = outerentry.getKey();
 
@@ -83,14 +82,13 @@ public class Logic {
 		Map<Integer, Map<String, List<Actor>>> perticularmovie = MoviesData.moviesbd();
 		List<String> movies = new ArrayList<String>();
 		for (Map.Entry<Integer, Map<String, List<Actor>>> outerentry : perticularmovie.entrySet()) {
-			// System.out.println(movies);
+
 			Integer av = outerentry.getKey();
 			Integer outerKey = outerentry.getKey();
 			Map<String, List<Actor>> innermapMap = outerentry.getValue();
 
 			for (Entry<String, List<Actor>> innernetry : innermapMap.entrySet()) {
 
-				// movies.innernetry.getKey();
 				List<Actor> mov = innernetry.getValue();
 
 				for (Actor string : mov) {
@@ -150,7 +148,6 @@ public class Logic {
 				List<Actor> actors = inn.getValue();
 
 				for (Actor act : actors) {
-					// System.out.println(act.getName());
 					System.out.println(act.getName());
 
 				}
@@ -170,37 +167,20 @@ public class Logic {
 		for (Map.Entry<Integer, Map<String, List<Actor>>> outermap : getactor.entrySet()) {
 
 			Integer outerkey = outermap.getKey();
-			Integer outerKey = outermap.getKey();
 
 			Map<java.lang.String, List<Actor>> innermap = outermap.getValue();
 
-			for (Entry<String, List<Actor>> inn : innermap.entrySet()) {
-				List<Actor> actors = inn.getValue();
-//				System.out.println(inn.getValue());
-//				System.out.println("============");
-//				System.out.println(actors);
-//				System.out.println("============");
-				
-				for (Object act : actors) {
-					if(act.equals(name))
-					System.out.println(act);
+			Set<java.lang.String> movnames = innermap.keySet();
+			for (String mn : movnames) {
+				List<Actor> actorlist = innermap.get(mn);
+				for (Actor actorobject : actorlist) {
+					if (actorobject.getName().equals(name)) {
+						actorallmovies.add(mn);
+
+					}if (actorallmovies.isEmpty()) {
+						actorallmovies.add("actor not found");
+					}
 				}
-
-//				if (inn.getKey().equalsIgnoreCase(name)) {
-//					
-//					actorallmovies.add(inn.getKey());
-//				}
-				System.out.println(outermap);
-		//	System.out.println(inn.getKey().equalsIgnoreCase(name));
-			
-//				for (Actor act : actors) {
-//					if (act.getName().equalsIgnoreCase(name)) {
-//
-//						actorallmovies.add(act);
-//					}
-//
-//				}
-
 			}
 
 		}

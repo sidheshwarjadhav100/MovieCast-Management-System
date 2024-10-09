@@ -182,24 +182,24 @@ public class ClientMenu {
 				}
 				System.out.println();
 				System.out.println("=================");
-				// search movie by actor name
-				System.out.println("Enter Actor Name");
+
+				System.out.println("Enter Actor Name form above only");
 				try {
 					name = bf.readLine();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
+
 					e.printStackTrace();
 				}
 
 				List actorallmovies = Controllers.getAllMoviesOfActor(name);
-				System.out.println("Actor Movies are ");
-				System.out.println("Siddheshwar");
-				System.out.println();
+				System.out.println("============================");
+				System.out.println("Actor All Movies are ");
 				for (Object object : actorallmovies) {
 					System.out.println(object);
 
 				}
-
+				System.out.println();
+				System.out.println("================================");
 				break;
 
 			}

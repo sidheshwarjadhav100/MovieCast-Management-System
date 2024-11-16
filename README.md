@@ -12,7 +12,7 @@ FilmographyHub is a robust Java-based application designed for managing movies a
 
 ## Project Structure
 
-```plaintext
+<pre><code>
 src/
 ├── com.sid.client/
 │   └── ClientMenu.java        # Handles user interactions
@@ -24,4 +24,10 @@ src/
 │   └── Actor.java             # Represents the Actor entity
 ├── com.sid.service/
 │   └── Logic.java             # Core business logic for data retrieval and manipulation
+</code></pre>
+
+
+
+
+**For any questions or feedback, feel free to reach out to** **sidheshwarjadhav100@gmail.com**
 
